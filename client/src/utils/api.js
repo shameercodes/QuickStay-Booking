@@ -4,7 +4,9 @@ import axios from 'axios';
 // using 127.0.0.1 vs localhost or a non-5173 Vite port. Override with VITE_API_URL if needed.
 const baseURL =
   import.meta.env.VITE_API_URL ||
-  (import.meta.env.DEV ? "/api" : "http://localhost:5000/api");
+  (import.meta.env.DEV
+    ? "/api"
+    : "https://quickstay-booking.onrender.com/api");
 
 const api = axios.create({
   baseURL,
